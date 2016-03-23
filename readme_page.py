@@ -14,6 +14,7 @@ The building and deployment of a GitHub Page is done by mkdocs.
 
 Author: Fernando Felix do Nascimento Junior
 License: The MIT License
+Readme Page site: http://fernandojunior.github.io/readme-page
 '''
 import os
 import yaml
