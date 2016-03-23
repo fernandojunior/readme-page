@@ -6,9 +6,9 @@ The page is only based on the README.md of the master branch of your project rep
 
 ## Usage
 
-1. Download the `Readme Page` ZIP.
+1. Download the [Readme Page](https://github.com/fernandojunior/readme-page/archive/master.zip) inside your local repository.
 
-2. Unpack and put it inside your local repository.
+2. Unpack it `unzip *.zip`.
 
 4. Change the current working directory to `cd readme-page`.
 
