@@ -1,18 +1,18 @@
 # Readme Page
 
-A tool to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project.
+A script to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project.
 
 The page is only based on the README.md of the master branch of your project repository.
 
 ## Usage
 
-1. Download the `Readme Page`.
+1. Download the `Readme Page` ZIP.
 
 2. Unpack and put it inside your local repository.
 
 4. Change the current working directory to `cd readme-page`.
 
-3. Run `make readme-page` to create and deploy your repository GitHub Page.
+3. Run `make readme-page` to create your repository GitHub Page.
 
     Run `make help` for more information.
 
