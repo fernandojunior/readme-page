@@ -10,7 +10,7 @@ The page is only based on the README.md of the master branch of your project rep
 
 2. Unpack it `unzip *.zip`.
 
-4. Change the current working directory to `cd readme-page`.
+4. Change the current working directory to `cd readme-page*`.
 
 3. Run `make readme-page` to create your repository GitHub Page.
 
