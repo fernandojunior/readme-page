@@ -16,7 +16,11 @@ The page is only based on the README.md of the master branch of your project rep
 
     Run `make help` for more information.
 
-4. Checkout the repository page at `https://<your_github_username>.github.io/<repository_name>`
+4. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
+
+    See an [example](http://fernandojunior.github.io/readme-page).
+
+    Run `make clean` to remove all generated artifacts.
 
 ## Contributing
 
