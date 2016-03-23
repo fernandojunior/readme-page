@@ -55,6 +55,21 @@ def create_docs():
     if not os.path.exists('docs'):
         os.makedirs('docs')
 
+
+def credits():
+    '''TODO Append readme-page credits in site/index.html.'''
+    home_page = 'http://fernandojunior.github.io/readme-page/'
+    brand = 'readme-page'
+    with open('site/index.html') as f:
+        html = f.read()
+    soup = BeautifulSoup(html)
+    cred = ' and <a href="%s">%s</a>.' % (home_page, brand)
+    soup.find('footer').find('p').contents[2].replace_with(BeautifulSoup(cred))
+    html = str(soup)
+    with open('site/index.html', "w") as f:
+        f.write(html)
+
+
 remote_url = cmd('git config --get remote.origin.url').decode('utf-8').strip()
 repo_url = 'https://' + remote_url.split('@')[1].replace(':', '/')
 create_configuration(repo_url)
