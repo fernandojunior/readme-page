@@ -1,0 +1,29 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Readme Page\n\n\nA script to create a simple readme \nGitHub Page\n for your project.\n\n\nThe page is only based on the README.md of the master branch of your project repository.\n\n\nUsage\n\n\n\n\n\n\nDownload the \nReadme Page\n ZIP.\n\n\n\n\n\n\nUnpack and put it inside your local repository.\n\n\n\n\n\n\nChange the current working directory to \ncd readme-page\n.\n\n\n\n\n\n\nRun \nmake readme-page\n to create your repository GitHub Page.\n\n\nRun \nmake help\n for more information.\n\n\n\n\n\n\nCheckout the repository page at \nhttps://\nyour_github_username\n.github.io/\nrepository_name\n\n\n\n\n\n\nContributing\n\n\nSee \nCONTRIBUTING\n.\n\n\nLicense\n\n\n\n\nThe MIT License.\n\n\n-\n\n\nCopyright (c) 2016 \nFernando Felix do Nascimento Junior\n.\n\n\n-\n\n\nThis project uses \nmkdocs\n, a Python tool to create project documentation with markdown.",
+            "title": "Home"
+        },
+        {
+            "location": "/#readme-page",
+            "text": "A script to create a simple readme  GitHub Page  for your project.  The page is only based on the README.md of the master branch of your project repository.",
+            "title": "Readme Page"
+        },
+        {
+            "location": "/#usage",
+            "text": "Download the  Readme Page  ZIP.    Unpack and put it inside your local repository.    Change the current working directory to  cd readme-page .    Run  make readme-page  to create your repository GitHub Page.  Run  make help  for more information.    Checkout the repository page at  https:// your_github_username .github.io/ repository_name",
+            "title": "Usage"
+        },
+        {
+            "location": "/#contributing",
+            "text": "See  CONTRIBUTING .",
+            "title": "Contributing"
+        },
+        {
+            "location": "/#license",
+            "text": "The MIT License.  -  Copyright (c) 2016  Fernando Felix do Nascimento Junior .  -  This project uses  mkdocs , a Python tool to create project documentation with markdown.",
+            "title": "License"
+        }
+    ]
+}
