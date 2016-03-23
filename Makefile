@@ -8,8 +8,8 @@ help:
 	@echo 'Commands:'
 	@echo '  env          Create a isolated development environment with its dependencies.'
 	@echo '  deps         Install dependencies.'
-	@echo '  readme-page       Creates a simple readme GitHub Page.'
-	@echo '  clean        Remove all docs and build artifacts.'
+	@echo '  readme-page       Create a simple readme GitHub Page.'
+	@echo '  clean        Remove all generated artifacts.'
 
 env:
 	virtualenv env && . env/bin/activate && make deps
