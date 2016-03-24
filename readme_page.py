@@ -14,7 +14,7 @@ The building and deployment of a GitHub Page is done by mkdocs.
 
 Author: Fernando Felix do Nascimento Junior
 License: The MIT License
-Readme Page site: http://fernandojunior.github.io/readme-page
+Homepage: http://fernandojunior.github.io/readme-page
 '''
 import os
 import yaml
@@ -70,10 +70,14 @@ def credits():
         f.write(html)
 
 
-remote_url = cmd('git config --get remote.origin.url').decode('utf-8').strip()
-repo_url = 'https://' + remote_url.split('@')[1].replace(':', '/')
-create_configuration(repo_url)
-create_docs()
-create_index(repo_url)
-cmd('mkdocs build --clean')
-cmd('mkdocs gh-deploy --clean')
+def main():
+   remote_url = cmd('git config --get remote.origin.url').decode('utf-8').strip()
+   repo_url = 'https://' + remote_url.split('@')[1].replace(':', '/')
+   create_configuration(repo_url)
+   create_docs()
+   create_index(repo_url)
+   cmd('mkdocs build --clean')
+   cmd('mkdocs gh-deploy --clean')
+
+if __name__ == '__main__:
+   main()
