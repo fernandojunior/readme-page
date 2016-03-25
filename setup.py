@@ -17,7 +17,7 @@ setup(
     version='0.0.1',
     author='Fernando Felix do Nascimento Junior',
     author_email='fernandojr.ifcg@live.com',
-    url='https://github.com/fernandojunior/readme-page',
+    url='http://fernandojunior.github.io/readme-page',
     license='MIT License',
     description='A script to create a simple readme GitHub Page for your project.',
     long_description=README,
