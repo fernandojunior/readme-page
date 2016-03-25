@@ -7,21 +7,11 @@ This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 
 ## Installation & Usage
 
-1. Download the [Readme Page](https://github.com/fernandojunior/readme-page/archive/master.zip) inside your local repository.
+1. Run `pip install readme-page` to install the script.
 
-2. Unpack it `unzip *.zip`.
+2. Run `readme-page` to create your repository GitHub Page.
 
-3. Change the current working directory to `cd readme-page*` inside a terminal.
-
-4. Run `make install` to install the script as a pip package.
-
-  `make help` for more information.
-
-5. Run `readme-page` to create your repository GitHub Page.
-
-6. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
-
-
+3. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
 
 ## Contributing
 
