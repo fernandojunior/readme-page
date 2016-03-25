@@ -78,7 +78,7 @@ def resources():
     '''Create the resources needed to build and deploy a GitHub page.'''
     remote_url = cmd('git config --get remote.origin.url')
     protocol = 'https'
-    domain, username, repo_name =  re.split(r'[@:/]', remote_url)[1:]
+    domain, username, repo_name = re.split(r'[@:/]', remote_url)[1:]
     repo_name = repo_name.replace('.git', '')
     repo_url = '%s://%s/%s/%s' % (protocol, domain, username, repo_name)
     create_configuration(repo_url)
@@ -87,12 +87,12 @@ def resources():
 
 
 def build():
-    '''Build a page (site) with mkdocs. The resources must be created.'''
+    '''Build a page/site with mkdocs. The resources must be created.'''
     cmd('mkdocs build --clean')
 
 
 def deploy():
-    '''Deploy a page (site) with mkdocs to gh-pages branch of the repository.'''
+    '''Deploy a page/site with mkdocs to gh-pages branch of the repository.'''
     cmd('mkdocs gh-deploy --clean')
 
 
