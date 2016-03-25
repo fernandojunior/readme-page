@@ -1,7 +1,8 @@
 # Some useful commands to create a simple readme page with mkdocs.
 #
 # Author: Fernando Felix do Nascimento Junior
-# License: The MIT License
+# License: MIT License
+# Homepage: http://fernandojunior.github.io/readme-page
 
 help:
 	@echo 'Usage: make [command]'
@@ -18,7 +19,7 @@ deps:
 	pip install -r requirements.txt
 
 readme-page: env
-	. env/bin/activate && python readme_page.py
+	. env/bin/activate && python readme-page
 
 clean:
 	rm mkdocs.yml
