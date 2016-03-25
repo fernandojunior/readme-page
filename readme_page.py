@@ -35,8 +35,8 @@ def create_configuration(repo_url):
 
     data = dict(
         repo_url=repo_url,
-        site_name=soup.select_one('article h1').contents[1]
-        site_description=soup.find(attrs={'name': 'description'})['content'],
+        site_name=soup.select_one('article h1').contents[1],
+        site_description=soup.select_one('meta[name=description]')['content'],
         theme='bootstrap'
     )
 
