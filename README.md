@@ -4,23 +4,23 @@ A script to create a simple readme [GitHub Page](https://help.github.com/article
 
 The page is only based on the README.md of the master branch of your project repository.
 
-## Usage
+## Installation & Usage
 
 1. Download the [Readme Page](https://github.com/fernandojunior/readme-page/archive/master.zip) inside your local repository.
 
 2. Unpack it `unzip *.zip`.
 
-4. Change the current working directory to `cd readme-page*`.
+3. Change the current working directory to `cd readme-page*` inside a terminal.
 
-3. Run `make readme-page` to create your repository GitHub Page.
+4. Run `make install` to install the script as a pip package.
 
-    Run `make help` for more information.
+  `make help` for more information.
 
-4. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
+5. Run `readme-page` to create your repository GitHub Page.
+
+6. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
 
     See an [example](http://fernandojunior.github.io/readme-page).
-
-    Run `make clean` to remove all generated artifacts.
 
 ## Contributing
 
