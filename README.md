@@ -2,7 +2,7 @@
 
 A script to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project. See an [example](http://fernandojunior.github.io/readme-page).
 
-This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) [mkdocs](http://mkdocs.github.io/mkdocs-bootstrap/) and [six](https://pythonhosted.org/six/).
+This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/), [mkdocs](http://mkdocs.github.io/mkdocs-bootstrap/) and [six](https://pythonhosted.org/six/).
 
 
 ## Installation & Usage
@@ -21,11 +21,11 @@ This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 
 6. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
 
-    
+
 
 ## Contributing
 
-See [CONTRIBUTING](/CONTRIBUTING.md).
+See [CONTRIBUTING](https://github.com/fernandojunior/readme-page/CONTRIBUTING.md).
 
 ## License
 

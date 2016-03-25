@@ -14,7 +14,7 @@ The following resources are created to build and deploy a page with mkdocs:
 
 Author: Fernando Felix do Nascimento Junior
 License: MIT License
-Homepage: http://fernandojunior.github.io/readme-page
+Homepage: https://github.com/fernandojunior/readme-page
 '''
 import os
 import re

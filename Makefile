@@ -2,7 +2,6 @@
 #
 # Author: Fernando Felix do Nascimento Junior
 # License: MIT License
-# Homepage: http://fernandojunior.github.io/readme-page
 
 help:
 	@echo 'Usage: make [command]'
@@ -20,7 +19,8 @@ deps:
 	pip install -r requirements.txt
 
 build:
-	python setup.py sdist
+	python setup.py egg_info sdist bdist_wheel
+	ls -l dist
 
 install: build
 	pip install dist/*.tar.gz
