@@ -4,13 +4,12 @@ This script creates a simple readme GitHub Page for a repository.
 The page is only based on the README.md of the master branch of your project
 repository that is retrieved automatically by the remote origin url.
 
-The following resources are created:
+The building and deployment of a GitHub Page is done by mkdocs.
+The following resources are created to build and deploy a page with mkdocs:
 
     * mkdocs.yml - mkdocs configuration file
     * docs - documentation folder
     * docs/index.md - Index page of the documentation
-
-The building and deployment of a GitHub Page is done by mkdocs.
 
 Author: Fernando Felix do Nascimento Junior
 License: The MIT License
@@ -71,14 +70,29 @@ def credits():
         f.write(html)
 
 
-def main():
+def resources():
+   '''Create the resources needed to build and deploy a GitHub page.'''
    remote_url = cmd('git config --get remote.origin.url').decode('utf-8').strip()
    repo_url = 'https://' + remote_url.split('@')[1].replace(':', '/')
    create_configuration(repo_url)
    create_docs()
    create_index(repo_url)
+
+
+def build():
+   '''Build a page (site) with mkdocs. The resources must be created.'''
    cmd('mkdocs build --clean')
+
+
+def deploy():
+   '''Deploy a page (site) with mkdocs to gh-pages branch of the repository.'''
    cmd('mkdocs gh-deploy --clean')
+
+
+def main():
+   resources()
+   build()
+   deploy()
 
 if __name__ == '__main__:
    main()
