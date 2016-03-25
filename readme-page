@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 This script creates a simple readme GitHub Page for a repository.
 
@@ -12,7 +13,7 @@ The following resources are created to build and deploy a page with mkdocs:
     * docs/index.md - Index page of the documentation
 
 Author: Fernando Felix do Nascimento Junior
-License: The MIT License
+License: MIT License
 Homepage: http://fernandojunior.github.io/readme-page
 '''
 import os
