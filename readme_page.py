@@ -58,13 +58,13 @@ def create_docs():
 
 def credits():
     '''TODO Append readme-page credits in site/index.html.'''
-    home_page = 'http://fernandojunior.github.io/readme-page/'
+    homepage = 'http://fernandojunior.github.io/readme-page/'
     brand = 'readme-page'
     with open('site/index.html') as f:
         html = f.read()
     soup = BeautifulSoup(html, 'html.parser')
-    cred = ' and <a href="%s">%s</a>.' % (home_page, brand)
-    soup.find('footer').find('p').contents[2].replace_with(BeautifulSoup(cred))
+    cred = ' and <a href="%s">%s</a>.' % (homepage, brand)
+    soup.select_one('footer p').contents[2].replace_with(BeautifulSoup(cred))
     html = str(soup)
     with open('site/index.html', "w") as f:
         f.write(html)
