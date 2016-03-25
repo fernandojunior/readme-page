@@ -4,11 +4,6 @@ Contains informations necessaries to build, release and install a distribution.
 from setuptools import setup
 from pip.req import parse_requirements as parse
 
-
-# Read the README file
-with open("README.md") as f:
-    README = f.read()
-
 # Parse a requirements file to string list
 requirements = lambda f: [str(i.req) for i in parse(f, session=False)]
 
@@ -20,8 +15,7 @@ setup(
     url='https://github.com/fernandojunior/readme-page',
     license='MIT License',
     description='A script to create a simple readme GitHub Page for your project.',
-    long_description=README,
-    platforms='ANY',
+    scripts=['readme-page'],
     install_requires=requirements('requirements.txt'),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -36,6 +30,5 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],  # see more at https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    zip_safe=False,
-    scripts=['readme-page']
+    zip_safe=False
 )
