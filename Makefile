@@ -9,7 +9,8 @@ help:
 	@echo 'Commands:'
 	@echo '  env          Create a isolated development environment with its dependencies.'
 	@echo '  deps         Install dependencies.'
-	@echo '  readme-page       Create a simple readme GitHub Page.'
+	@echo '  build        Create a dist package.'
+	@echo '  install      Install a local dist package with pip.'
 	@echo '  clean        Remove all generated artifacts.'
 
 env:
@@ -18,8 +19,11 @@ env:
 deps:
 	pip install -r requirements.txt
 
-readme-page: env
-	. env/bin/activate && python readme-page
+build:
+	python setup.py sdist
+
+install: build
+	pip install dist/*.tar.gz
 
 clean:
 	rm mkdocs.yml
