@@ -14,7 +14,7 @@ script_name = 'readme-page'
 
 setup_attrs = dict(
     name=script_name,
-    version='0.0.1',
+    version='1.0.0',
     author='Fernando Felix do Nascimento Junior',
     author_email='fernandojr.ifcg@live.com',
     url='https://github.com/fernandojunior/readme-page',
