@@ -31,7 +31,7 @@ def cmd(s):
 
 def create_configuration(repo_url):
     '''Create configuration with its settings based on the repository.'''
-    soup = BeautifulSoup(urlopen(repo_url).read())
+    soup = BeautifulSoup(urlopen(repo_url).read(), 'html.parser')
 
     data = dict(
         repo_url=repo_url,
@@ -62,7 +62,7 @@ def credits():
     brand = 'readme-page'
     with open('site/index.html') as f:
         html = f.read()
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, 'html.parser')
     cred = ' and <a href="%s">%s</a>.' % (home_page, brand)
     soup.find('footer').find('p').contents[2].replace_with(BeautifulSoup(cred))
     html = str(soup)
