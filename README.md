@@ -7,11 +7,15 @@ This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 
 ## Installation & Usage
 
-1. Run `pip install readme-page` to install the script.
+1. Create a virtual environment into your project and activate it.
 
-2. Run `readme-page` to create your repository GitHub Page.
+    `virtualenv env && source env/bin/activate`
 
-3. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
+2. Run `pip install readme-page` to install the script.
+
+3. Run `readme-page` to create your repository GitHub Page.
+
+4. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
 
 ## Contributing
 
