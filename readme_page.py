@@ -26,17 +26,20 @@ from bs4 import BeautifulSoup
 
 def cmd(s):
     '''Execute the command (a string) in a subshell and return its output.'''
-    return subprocess.check_output(s.split())
+    return subprocess.check_output(s.split()).decode('utf-8').strip()
 
 
 def create_configuration(repo_url):
     '''Create configuration with its settings based on the repository.'''
     soup = BeautifulSoup(urlopen(repo_url).read(), 'html.parser')
 
+    site_name = str(soup.select('article h1')[0].contents[1])
+    site_description = str(soup.select('meta[name=description]')[0]['content'])
+
     data = dict(
         repo_url=repo_url,
-        site_name=soup.select_one('article h1').contents[1],
-        site_description=soup.select_one('meta[name=description]')['content'],
+        site_name=site_name,
+        site_description=site_description,
         theme='bootstrap'
     )
 
@@ -64,35 +67,38 @@ def credits():
         html = f.read()
     soup = BeautifulSoup(html, 'html.parser')
     cred = ' and <a href="%s">%s</a>.' % (homepage, brand)
-    soup.select_one('footer p').contents[2].replace_with(BeautifulSoup(cred))
+    soup.select('footer p')[0].contents[2].replace_with(BeautifulSoup(cred))
     html = str(soup)
     with open('site/index.html', "w") as f:
         f.write(html)
 
 
 def resources():
-   '''Create the resources needed to build and deploy a GitHub page.'''
-   remote_url = cmd('git config --get remote.origin.url').decode('utf-8').strip()
-   repo_url = 'https://' + remote_url.split('@')[1].replace(':', '/')
-   create_configuration(repo_url)
-   create_docs()
-   create_index(repo_url)
+    '''Create the resources needed to build and deploy a GitHub page.'''
+    remote_url = cmd('git config --get remote.origin.url')
+    protocol = 'https'
+    domain, username, repo_name =  re.split(r'[@:/]', remote_url)[1:]
+    repo_name = repo_name.replace('.git', '')
+    repo_url = '%s://%s/%s/%s' % (protocol, domain, username, repo_name)
+    create_configuration(repo_url)
+    create_docs()
+    create_index(repo_url)
 
 
 def build():
-   '''Build a page (site) with mkdocs. The resources must be created.'''
-   cmd('mkdocs build --clean')
+    '''Build a page (site) with mkdocs. The resources must be created.'''
+    cmd('mkdocs build --clean')
 
 
 def deploy():
-   '''Deploy a page (site) with mkdocs to gh-pages branch of the repository.'''
-   cmd('mkdocs gh-deploy --clean')
+    '''Deploy a page (site) with mkdocs to gh-pages branch of the repository.'''
+    cmd('mkdocs gh-deploy --clean')
 
 
 def main():
-   resources()
-   build()
-   deploy()
+    resources()
+    build()
+    deploy()
 
-if __name__ == '__main__:
-   main()
+if __name__ == '__main__':
+    main()
