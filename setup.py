@@ -21,7 +21,6 @@ setup(
     license='MIT License',
     description='A script to create a simple readme GitHub Page for your project.',
     long_description=README,
-    py_modules=['readme_page'],
     install_requires=requirements('requirements.txt'),
     zip_safe=False,
     classifiers=[
@@ -37,9 +36,5 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],  # see more at https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    entry_points={
-          'console_scripts': [
-              'readme-page=readme_page.__main__:main'
-          ]
-      },
+    scripts=['readme-page']
 )
