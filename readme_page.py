@@ -17,6 +17,7 @@ License: The MIT License
 Homepage: http://fernandojunior.github.io/readme-page
 '''
 import os
+import re
 import yaml
 import subprocess
 from six.moves.urllib.request import urlopen
@@ -58,7 +59,7 @@ def create_docs():
 
 def credits():
     '''TODO Append readme-page credits in site/index.html.'''
-    homepage = 'http://fernandojunior.github.io/readme-page/'
+    homepage = re.findall('[hH]omepage:\s*(.*)', __doc__)[0]
     brand = 'readme-page'
     with open('site/index.html') as f:
         html = f.read()
