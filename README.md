@@ -1,6 +1,6 @@
 # Readme Page
 
-A script to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project. See an [example](http://fernandojunior.github.io/readme-page).
+A script to create a readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project. See an [example](http://fernandojunior.github.io/readme-page).
 
 This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/), [mkdocs](http://mkdocs.github.io/mkdocs-bootstrap/) and [six](https://pythonhosted.org/six/).
 
