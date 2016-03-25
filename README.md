@@ -1,8 +1,9 @@
 # Readme Page
 
-A script to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project.
+A script to create a simple readme [GitHub Page](https://help.github.com/articles/creating-project-pages-manually) for your project. See an [example](http://fernandojunior.github.io/readme-page).
 
-The page is only based on the README.md of the master branch of your project repository.
+This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) [mkdocs](http://mkdocs.github.io/mkdocs-bootstrap/) and [six](https://pythonhosted.org/six/).
+
 
 ## Installation & Usage
 
@@ -20,7 +21,7 @@ The page is only based on the README.md of the master branch of your project rep
 
 6. Checkout the repository page at `http://<your_github_username>.github.io/<repository_name>`
 
-    See an [example](http://fernandojunior.github.io/readme-page).
+    
 
 ## Contributing
 
@@ -35,7 +36,3 @@ The MIT License.
 -
 
 Copyright (c) 2016 [Fernando Felix do Nascimento Junior](https://github.com/fernandojunior/).
-
--
-
-This project uses [mkdocs](http://mkdocs.github.io/mkdocs-bootstrap/), a Python tool to create project documentation with markdown.
