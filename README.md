@@ -19,7 +19,7 @@ This project uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 
 ## Contributing
 
-See [CONTRIBUTING](https://github.com/fernandojunior/readme-page/CONTRIBUTING.md).
+See [CONTRIBUTING](/CONTRIBUTING.md).
 
 ## License
 
